@@ -53,3 +53,14 @@ task _projectZip(type:Zip) {
 
     destinationDir file('zip')
 }
+
+task _answerZip(type:Zip) {
+    from projectDir
+    include 'app/src/main/java/com/company/buildings/logic/House.java'
+    include 'app/src/main/java/com/company/buildings/logic/Cottage.java'
+    include 'app/src/main/java/com/company/buildings/logic/Building.java'
+    include 'app/src/main/java/com/company/buildings/logic/Neighborhood.java'
+    include 'app/src/main/java/com/company/buildings/logic/Office.java'
+    baseName = 'answer-files'
+    destinationDir file('zip') // directory that you want your archive to be placed in
+}
